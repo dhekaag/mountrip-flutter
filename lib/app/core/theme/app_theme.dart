@@ -15,8 +15,81 @@ class AppTheme {
       titleTextStyle: TextStyle(color: tertiaryColor, fontSize: 20),
     ),
     textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: tertiaryColor),
-      bodyMedium: TextStyle(color: tertiaryColor),
+      displayLarge: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: tertiaryColor,
+      ),
+      displayMedium: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: tertiaryColor,
+      ),
+      displaySmall: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+        color: tertiaryColor,
+      ),
+      headlineLarge: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: tertiaryColor,
+      ),
+      headlineMedium: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+        color: tertiaryColor,
+      ),
+      headlineSmall: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+        color: tertiaryColor,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w500,
+        color: tertiaryColor,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+        color: tertiaryColor,
+      ),
+      titleSmall: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w500,
+        color: tertiaryColor,
+      ),
+      labelLarge: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+        color: tertiaryColor,
+      ),
+      labelMedium: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: tertiaryColor,
+      ),
+      labelSmall: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+        color: tertiaryColor,
+      ),
+      bodyLarge: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+        color: tertiaryColor,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+        color: tertiaryColor,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 10,
+        fontWeight: FontWeight.w500,
+        color: tertiaryColor,
+      ),
     ),
   );
 }

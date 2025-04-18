@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:mountrip/app/modules/login/bindings/login_binding.dart';
-import 'package:mountrip/app/modules/login/views/login_view.dart';
+import 'package:mountrip/app/features/login/bindings/login_binding.dart';
+import 'package:mountrip/app/features/login/views/login_view.dart';
 part 'app_routes.dart';
 
 class AppPages {
