@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "970141986633",
+    "project_id": "mountrip-6cebb",
+    "storage_bucket": "mountrip-6cebb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970141986633:android:d20b08503b9ef92c9e3498",
+        "android_client_info": {
+          "package_name": "com.example.mountrip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970141986633-5ktquev8v6ebhnq2h6kqula4l18shcnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjoi4tai_oNnk1SetMna9qaLbpn4mwMzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970141986633-5ktquev8v6ebhnq2h6kqula4l18shcnu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "970141986633-id83h5eara6duc5t5fdg1sr0pvn5tjsb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mountrip"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
