@@ -14,6 +14,21 @@ class AppTheme {
       iconTheme: IconThemeData(color: tertiaryColor),
       titleTextStyle: TextStyle(color: tertiaryColor, fontSize: 20),
     ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        disabledBackgroundColor: primaryColor.withAlpha(20),
+        backgroundColor: primaryColor,
+        foregroundColor: Colors.white,
+        textStyle: const TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w600,
+        ),
+        minimumSize: const Size(40, 40),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+      ),
+    ),
     textTheme: const TextTheme(
       displayLarge: TextStyle(
         fontSize: 24,
