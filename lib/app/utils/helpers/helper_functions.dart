@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mountrip/app/core/constant/color.dart';
 
 class THelperFunctions {
   static Color? getColor(String value) {
@@ -41,6 +42,48 @@ class THelperFunctions {
   static void showSnackBar(String message) {
     ScaffoldMessenger.of(Get.context!).showSnackBar(
       SnackBar(content: Text(message)),
+    );
+  }
+
+  static void showErrorSnackBar(
+    String message, {
+    Duration? duration,
+    int? marginBottom = 170,
+  }) {
+    ScaffoldMessenger.of(Get.context!).showSnackBar(
+      SnackBar(
+          content: Text(message,
+              style: TextStyle(color: errorColor, fontWeight: FontWeight.w600)),
+          duration: duration ?? const Duration(milliseconds: 2000),
+          backgroundColor: errorContainerColor,
+          showCloseIcon: true,
+          closeIconColor: errorColor,
+          dismissDirection: DismissDirection.up,
+          behavior: SnackBarBehavior.floating,
+          margin: EdgeInsets.only(
+            bottom: MediaQuery.of(Get.context!).size.height - marginBottom!,
+            left: 10,
+            right: 10,
+          )),
+    );
+  }
+
+  static void showSuccessSnackBar(String message,
+      {Duration? duration, int? marginBottom = 170}) {
+    ScaffoldMessenger.of(Get.context!).showSnackBar(
+      SnackBar(
+          content: Text(message,
+              style: const TextStyle(fontWeight: FontWeight.w600)),
+          backgroundColor: primaryColor,
+          duration: duration ?? const Duration(milliseconds: 2000),
+          showCloseIcon: true,
+          dismissDirection: DismissDirection.up,
+          behavior: SnackBarBehavior.floating,
+          margin: EdgeInsets.only(
+            bottom: MediaQuery.of(Get.context!).size.height - marginBottom!,
+            left: 10,
+            right: 10,
+          )),
     );
   }
 
