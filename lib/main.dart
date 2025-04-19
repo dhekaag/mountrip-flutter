@@ -11,8 +11,8 @@ import 'app/core/theme/app_theme.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   setEdgeToEdge();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   await Future.wait([
     Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform),

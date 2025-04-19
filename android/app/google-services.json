@@ -14,6 +14,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "970141986633-e4iri0837imd62q286iolm5d6m7rmu7d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mountrip",
+            "certificate_hash": "2a363ef9a9cfecf4462a7c5f11fa859a69bcfa5b"
+          }
+        },
+        {
+          "client_id": "970141986633-te0a88n2067hm1ffqcvipbba8b7b0okk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mountrip",
+            "certificate_hash": "c465ac580a7555e8323c6c34228ce47806d4e9ec"
+          }
+        },
+        {
           "client_id": "970141986633-5ktquev8v6ebhnq2h6kqula4l18shcnu.apps.googleusercontent.com",
           "client_type": 3
         }
