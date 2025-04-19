@@ -31,11 +31,11 @@ class LoginView extends GetView<LoginController> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                    top: THelperFunctions.screenHeight() * 0.25,
+                    top: THelperFunctions.screenHeight() * 0.27,
                   ),
                   child: Image.asset(
                     'assets/images/login-logo.png',
-                    width: THelperFunctions.screenWidth() * 0.5,
+                    width: THelperFunctions.screenWidth() * 0.4,
                     height: THelperFunctions.screenHeight() * 0.2,
                   ),
                 ),
@@ -44,7 +44,7 @@ class LoginView extends GetView<LoginController> {
                   'Welcome to Mountrip',
                   style: Theme.of(context).textTheme.displayLarge?.copyWith(
                         fontWeight: FontWeight.bold,
-                        fontSize: AdaptiveFont.getFontSize(context, 22),
+                        fontSize: AdaptiveFont.getFontSize(context, 20),
                       ),
                 ),
                 SizedBox(
