@@ -60,6 +60,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '970141986633',
     projectId: 'mountrip-6cebb',
     storageBucket: 'mountrip-6cebb.firebasestorage.app',
+    androidClientId: '970141986633-e4iri0837imd62q286iolm5d6m7rmu7d.apps.googleusercontent.com',
     iosClientId: '970141986633-id83h5eara6duc5t5fdg1sr0pvn5tjsb.apps.googleusercontent.com',
     iosBundleId: 'com.example.mountrip',
   );

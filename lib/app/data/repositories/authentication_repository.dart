@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -76,6 +77,41 @@ class AuthenticationRepository extends GetxController {
           marginBottom: 100,
         );
       }
+    }
+    return null;
+  }
+
+  // Sign in with facebook
+  Future<UserCredential?> signInWithFacebook() async {
+    try {
+      final LoginResult loginResult = await FacebookAuth.instance.login();
+      if (loginResult.status == LoginStatus.success) {
+        final AccessToken accessToken = loginResult.accessToken!;
+        final AuthCredential credential =
+            FacebookAuthProvider.credential(accessToken.tokenString);
+        final UserCredential userCredential =
+            await _auth.signInWithCredential(credential);
+        setInitialScreen(userCredential.user);
+        return userCredential;
+      } else if (loginResult.status == LoginStatus.cancelled) {
+        if (kDebugMode) logger.e("Login error : ${loginResult.message}");
+        THelperFunctions.showErrorSnackBar(
+          "Login cancelled. Please try again.",
+          marginBottom: 100,
+        );
+      } else if (loginResult.status == LoginStatus.failed) {
+        if (kDebugMode) logger.e("Login error : ${loginResult.message}");
+        THelperFunctions.showErrorSnackBar(
+          "Login failed. Please try again.",
+          marginBottom: 100,
+        );
+      }
+    } catch (e) {
+      if (kDebugMode) logger.e("Login error : $e");
+      THelperFunctions.showErrorSnackBar(
+        "Login error. Please try again.",
+        marginBottom: 100,
+      );
     }
     return null;
   }

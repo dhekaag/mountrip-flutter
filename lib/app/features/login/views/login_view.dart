@@ -58,30 +58,38 @@ class LoginView extends GetView<LoginController> {
                       ),
                 ),
                 SizedBox(height: THelperFunctions.screenHeight() * 0.05),
-                ElevatedButton.icon(
-                  onPressed: () {
-                    // Handle login action
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: secondaryColor,
-                    minimumSize: Size(
-                      THelperFunctions.screenWidth(),
-                      THelperFunctions.screenHeight() * 0.055,
-                    ),
-                  ),
-                  iconAlignment: IconAlignment.start,
-                  icon: Image.asset(
-                    'assets/icons/icon-facebook.png',
-                    width: AdaptiveFont.getFontSize(context, 24),
-                  ),
-                  label: Text(
-                    'Continue with Facebook',
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontWeight: FontWeight.w500,
-                          fontSize: AdaptiveFont.getFontSize(context, 15),
+                Obx(() => ElevatedButton.icon(
+                      onPressed: controller.isLoadingFacebook.value
+                          ? null
+                          : controller.loginWithFacebook,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: secondaryColor,
+                        minimumSize: Size(
+                          THelperFunctions.screenWidth(),
+                          THelperFunctions.screenHeight() * 0.055,
                         ),
-                  ),
-                ),
+                      ),
+                      iconAlignment: IconAlignment.start,
+                      icon: controller.isLoadingFacebook.value
+                          ? SizedBox(
+                              height: 20,
+                              width: 20,
+                              child: CircularProgressIndicator(
+                                color: Colors.blueAccent,
+                              ),
+                            )
+                          : Image.asset(
+                              'assets/icons/icon-facebook.png',
+                              width: AdaptiveFont.getFontSize(context, 24),
+                            ),
+                      label: Text(
+                        'Continue with Facebook',
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              fontWeight: FontWeight.w500,
+                              fontSize: AdaptiveFont.getFontSize(context, 15),
+                            ),
+                      ),
+                    )),
                 SizedBox(height: THelperFunctions.screenHeight() * 0.02),
                 Obx(
                   () => ElevatedButton.icon(
