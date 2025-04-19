@@ -32,7 +32,9 @@ class AuthenticationRepository extends GetxController {
   }
 
   setInitialScreen(User? user) {
-    user == null ? Get.offAllNamed(Routes.LOGIN) : Get.offAllNamed(Routes.HOME);
+    user == null
+        ? Get.offAllNamed(Routes.LOGIN)
+        : Get.offAllNamed(Routes.NAVIGATION);
   }
 
   Future<UserCredential?> signInWithGoogle() async {
